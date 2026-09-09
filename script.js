@@ -72,3 +72,42 @@ if ('IntersectionObserver' in window) {
 document.querySelectorAll('[data-current-year]').forEach((year) => {
     year.textContent = new Date().getFullYear();
 });
+
+const typingText = document.querySelector('#typing-text');
+const typingPhrases = [
+    'Digital Marketing',
+    'Google Ads & Meta Ads',
+    'AI Content Creator',
+    'Web Developer',
+    'Data Entry Specialist',
+    'Beta Tester',
+    'Forex & Crypto Trader'
+];
+
+if (typingText) {
+    let phraseIndex = 0;
+    let characterIndex = 0;
+    let deleting = false;
+
+    const typePhrase = () => {
+        const phrase = typingPhrases[phraseIndex];
+        typingText.textContent = phrase.slice(0, characterIndex);
+
+        if (!deleting && characterIndex < phrase.length) {
+            characterIndex += 1;
+            window.setTimeout(typePhrase, 75);
+        } else if (!deleting) {
+            deleting = true;
+            window.setTimeout(typePhrase, 1600);
+        } else if (characterIndex > 0) {
+            characterIndex -= 1;
+            window.setTimeout(typePhrase, 42);
+        } else {
+            deleting = false;
+            phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+            window.setTimeout(typePhrase, 350);
+        }
+    };
+
+    typePhrase();
+}
