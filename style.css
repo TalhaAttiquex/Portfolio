@@ -161,10 +161,9 @@ body { background: var(--cream); color: var(--dark); }
 .experience-card p, .project-card p { color: var(--muted); font-size: .88rem; line-height: 1.6; margin: 7px 0 0; }
 .experience-card strong { background: var(--secondary-bg); border-radius: 999px; color: var(--dark); font-size: .7rem; font-weight: 600; padding: 7px 10px; text-align: right; white-space: nowrap; }
 .skill-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.skill-card { display: grid; gap: 18px; grid-template-columns: auto 1fr auto; isolation: isolate; min-height: 150px; overflow: hidden; padding: 24px; position: relative; transition: box-shadow .25s ease, transform .25s ease; }
+.skill-card { display: grid; gap: 18px; grid-template-columns: auto 1fr; isolation: isolate; min-height: 150px; overflow: hidden; padding: 24px; position: relative; transition: box-shadow .25s ease, transform .25s ease; }
 .skill-card h3 { align-self: end; font-size: 1.05rem; }
 .skill-card small { color: var(--muted); display: block; font-size: .78em; font-weight: 500; margin-top: 5px; }
-.skill-card i { align-self: start; background: var(--yellow); border-radius: 50%; color: var(--secondary-dark); font-style: normal; height: 28px; line-height: 28px; text-align: center; width: 28px; }
 .project-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .project-card { display: flex; flex-direction: column; min-height: 270px; padding: 25px; transition: box-shadow .25s ease, transform .25s ease; }
 .project-card-featured { overflow: hidden; }
@@ -185,12 +184,12 @@ body { background: var(--cream); color: var(--dark); }
 .typing-line { color: var(--muted); font-size: clamp(.95rem, 1.8vw, 1.2rem); line-height: 1.4; margin: 16px 0 0; min-height: 1.4em; }
 .typing-line::after { animation: typing-cursor .8s steps(1) infinite; border-right: 2px solid var(--dark); content: ''; display: inline-block; height: 1em; margin-left: 5px; vertical-align: -.12em; }
 .contact-link { background-position: right 18px center; background-repeat: no-repeat; background-size: 96px; overflow: hidden; position: relative; isolation: isolate; }
-.contact-link::before { background-position: right 18px center; background-repeat: no-repeat; background-size: 96px; content: ''; inset: 0; opacity: .07; pointer-events: none; position: absolute; transition: opacity .25s ease, transform .25s ease; z-index: -1; }
-.contact-link:nth-child(1)::before { background-image: url('https://cdn.simpleicons.org/github/0C1216'); }
-.contact-link:nth-child(2)::before { background-image: url('https://cdn.simpleicons.org/instagram/0C1216'); }
-.contact-link:nth-child(3)::before { background-image: url('https://cdn.simpleicons.org/gmail/0C1216'); }
-.contact-link:nth-child(4)::before { background-image: url('https://cdn.simpleicons.org/whatsapp/0C1216'); }
-.contact-link:hover::before { opacity: .14; transform: scale(1.04); }
+.contact-link::before { background-position: right 18px center; background-repeat: no-repeat; background-size: 96px; content: ''; inset: 0; opacity: .16; pointer-events: none; position: absolute; transition: opacity .25s ease, transform .25s ease; z-index: -1; }
+.contact-link:nth-child(1)::before { background-image: url('https://cdn.simpleicons.org/github/181717'); }
+.contact-link:nth-child(2)::before { background-image: url('https://cdn.simpleicons.org/instagram/E4405F'); }
+.contact-link:nth-child(3)::before { background-image: url('https://cdn.simpleicons.org/gmail/EA4335'); }
+.contact-link:nth-child(4)::before { background-image: url('https://cdn.simpleicons.org/whatsapp/25D366'); }
+.contact-link:hover::before { opacity: .24; transform: scale(1.04); }
 .site-footer { border-top: 1px solid var(--border); max-width: none; padding: 30px 6vw; }
 .site-footer a { font-weight: 700; }
 .project-preview-page { min-height: 100vh; }
